@@ -101,8 +101,9 @@ footer p {
     position: relative;
 }
 
-.oszlopos .belso p {
-    margin: 10px;
+.oszlopos p {
+    margin: auto;
+    padding: 5px;
 }
 
 .oszlopos .belso:before {
