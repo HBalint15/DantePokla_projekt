@@ -9,6 +9,11 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
+article {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
 
 html {
     scroll-behavior: smooth;
@@ -20,6 +25,12 @@ img {
 }
 
 /* slideok */
+.belso p {
+    font-size: 18px;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
 .egymas_mellett_t1 {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
