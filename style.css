@@ -2,66 +2,86 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial;
     background-image: linear-gradient(65deg, rgb(151, 151, 151), rgb(255, 166, 0));
     background-repeat: no-repeat;
     min-height: 100vh;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 img {
     width: 100%;
     border-radius: 15px;
 }
+
 /* slideok */
 .egymas_mellett_t1 {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
 }
+
 .egymas_mellett_t1 img {
     transform: rotate(10deg);
 }
+
 .egymas_mellett_t2 {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
 }
+
 .egymas_mellett_t2 img {
     transform: rotate(-10deg);
 }
+
 .egymas_mellett_t3 {
     display: grid;
     grid-template-columns: 1fr 0.1fr;
 }
+
 .egymas_mellett_t4 {
     display: grid;
     grid-template-columns: 0.1fr 1fr;
 }
+
 .egymas_mellett_t5 {
     display: grid;
     grid-template-columns: 1fr 0.4fr;
 }
+
 .egymas_mellett_t5 img {
     transform: rotate(5deg);
 }
+
 .egymas_mellett_t6 {
     display: grid;
     grid-template-columns: 0.4fr 1fr;
 }
+
 .egymas_mellett_t6 img {
     transform: rotate(-5deg);
 }
+
 .oszlopos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
+
 .oszlopos .belso {
     border-radius: 25px;
     background-color: darkorange;
     position: relative;
 }
+
+.oszlopos .belso p {
+    margin: 10px;
+}
+
 .oszlopos .belso:before {
     content: "";
     position: absolute;
@@ -72,29 +92,39 @@ img {
     border-radius: 25px;
     z-index: -1;
 }
-.oszlopos h1, .oszlopos img {
+
+.oszlopos h1,
+.oszlopos img {
     grid-column: span 2;
 }
+
 .oszlopos img {
     width: 40%;
     transform: rotate(-10deg);
     margin: 20px auto 40px auto;
 }
+
 .belso {
     margin: 18px;
 }
+
 .slide {
     margin: 20px;
 }
-h1, h2 {
+
+h1,
+h2 {
     text-align: center;
 }
+
 h1 {
     font-size: 50px;
 }
+
 h2 {
     font-size: 20px;
 }
+
 .slide h1 {
     font-size: 35px;
     background-color: white;
@@ -106,6 +136,7 @@ h2 {
     margin-bottom: 40px;
     position: relative;
 }
+
 .slide h1::after {
     content: "";
     width: 100%;
@@ -118,9 +149,11 @@ h2 {
     z-index: -1;
     filter: blur(15px);
 }
+
 .slide {
     margin-top: 45px;
 }
+
 /* menü */
 nav {
     display: grid;
@@ -129,6 +162,7 @@ nav {
     gap: 40px;
     background-color: rgba(0, 0, 0, 0.496);
 }
+
 nav div {
     background-color: rgb(245, 253, 178);
     text-align: center;
@@ -138,14 +172,17 @@ nav div {
     border: 2px solid black;
     transition: 0.6s all cubic-bezier(0.1, 0.2, 0.25, 1.02);
 }
+
 nav div:hover {
     background-color: orange;
     transform: scale(1.05);
 }
+
 nav a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
+
 #main_title {
     background-color: rgb(255, 240, 28);
     width: 50%;
@@ -157,6 +194,7 @@ nav a {
     padding: 8px;
     -webkit-text-stroke: 2px black;
 }
+
 #main_title::after {
     content: "";
     background-color: rgb(0, 0, 0);
@@ -169,4 +207,121 @@ nav a {
     position: absolute;
     z-index: -1;
     border-radius: 25px;
+}
+
+@media screen and (max-width: 710px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    header h2 {
+        font-size: 15px;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        gap: 1px;
+    }
+
+    .egymas_mellett_t1 {
+        grid-template-columns: 1fr;
+    }
+
+    .egymas_mellett_t2 {
+        grid-template-columns: 1fr;
+    }
+
+    .egymas_mellett_t3 {
+        grid-template-columns: 1fr;
+    }
+
+    .egymas_mellett_t4 {
+        grid-template-columns: 1fr;
+    }
+
+    .egymas_mellett_t5 {
+        grid-template-columns: 1fr;
+    }
+
+    .egymas_mellett_t6 {
+        grid-template-columns: 1fr;
+    }
+
+    .egymas_mellett_t1 img {
+        transform: rotate(0deg);
+    }
+
+    .egymas_mellett_t2 img {
+        transform: rotate(0deg);
+    }
+
+    .egymas_mellett_t5 img {
+        transform: rotate(0deg);
+    }
+
+    .egymas_mellett_t6 img {
+        transform: rotate(0deg);
+    }
+
+    img {
+        padding: 5px;
+    }
+
+    .egymas_mellett_t3 img,
+    .egymas_mellett_t4 img {
+        width: 60%;
+        margin: auto;
+    }
+
+    .oszlopos {
+        grid-template-columns: 1fr;
+    }
+
+    .oszlopos h1,
+    .oszlopos img {
+        grid-column: span 1;
+    }
+
+    .oszlopos img {
+        width: 70%;
+        transform: rotate(0deg);
+    }
+
+    #main_title {
+        width: 80%;
+        min-width: 240px;
+    }
+
+    .belso {
+        margin: 18px 0px 18px 0px;
+    }
+
+    .slide h1 {
+        width: 80%;
+    }
+    body {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    #main_title {
+        width: 100%;
+        min-width: 0px;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 10px;
+    }
+    .slide h1 {
+        font-size: 25px;
+        -webkit-text-stroke: 0px;
+        color: black;
+    }
+    .slide h2 {
+        font-size: 18px;
+    }
 }
